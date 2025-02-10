@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ancillary Fees | Bobo Airlines</title>
+    <link href='https://fonts.googleapis.com/css?family=ADLaM Display' rel='stylesheet'>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="./styles.css" rel="stylesheet">
+    <link href="favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <script src="./scripts.js"></script>
+</head>
+<body class="swirl-background" onload="loadFees()">
+<nav>
+    <a class="home-redirect" href="./index.html"><span>Bobo</span> Airlines</a>
+    <div>
+        <a class="nav-link" href="./home.html">Home</a>
+        <a class="nav-link" href="./about.html">About</a>
+        <a class="nav-link" href="./contact.html">Contact Us</a>
+        <a class="nav-link" href="./home.html"><i class="fa">&#xf002;</i></a>
+    </div>
+</nav>
+
+<div class="booking-content">
+    <div class="price-container">
+        <div class="price-summary">
+            <h2 class="details-title">Add Extra Benefits</h2>
+            <div class="light-grey line"></div>
+            <div class="prices-container">
+                <p class="prices-text">Flight Fees</p>
+                <p class="prices-text price" id="flight-fees"></p>
+            </div>
+            <div class="light-grey line"></div>
+            <div class="fees">
+                <input type="checkbox" name="extra-leg-room" id="extra-leg-room" onchange="changePrice()">
+                <label for="extra-leg-room" class="prices-text">Add Extra Leg Room</label>
+                <p class="prices-text price">+$50.00</p>
+                <input type="checkbox" name="extra-baggage" id="extra-baggage" onchange="changePrice()">
+                <label for="extra-baggage" class="prices-text">Add Extra Baggage</label>
+                <p class="prices-text price">+$25.00</p>
+                <input type="checkbox" name="priority-boarding" id="priority-boarding" onchange="changePrice()">
+                <label for="priority-boarding" class="prices-text">Priority Boarding</label>
+                <p class="prices-text price">+$30.00</p>
+            </div>
+        </div>
+        <div class="light-grey line" style="margin: 0;"></div>
+        <div class="total-price" id="total-price">
+            <p class="total-price-text">Grand Total</p>
+            <p class="total-price-text" id="total-price-value"></p>
+        </div>
+    </div>
+    <input class="checkout" type="button" value="Proceed to Checkout" disabled>
+</div>
+<div class="error">
+    <span>This is only a UI example, payment will be implemented in the actual product</span>
+</div>
+</body>
+</html>

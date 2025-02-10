@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home | Bobo Airlines</title>
+    <link href='https://fonts.googleapis.com/css?family=ADLaM Display' rel='stylesheet'>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="./styles.css" rel="stylesheet">
+    <link href="favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <script src="./scripts.js"></script>
+</head>
+<body class="no-overflow">
+<nav>
+    <a class="home-redirect" href="./index.html"><span>Bobo</span> Airlines</a>
+    <div>
+        <a class="active nav-link" href="./home.html">Home</a>
+        <a class="nav-link" href="./about.html">About</a>
+        <a class="nav-link" href="./contact.html">Contact Us</a>
+        <a class="nav-link" href="./home.html"><i class="fa">&#xf002;</i></a>
+    </div>
+</nav>
+
+<div class="container">
+    <div class="background">
+        <div>
+            <h1>Fly The Friendly Skies</h1>
+            <p>
+                With affordable flying, you can easily book any flight you need to travel safely thanks to our search
+                system
+                and airline bookings
+            </p>
+        </div>
+        <img alt="" class="swirl-1" src="./resources/air_swirl_1.png">
+        <img alt="" class="swirl-2" src="./resources/air_swirl_2.png">
+    </div>
+
+    <div class="item-search">
+        <div class="items">
+            <input class="selected item" id="flights-button" onclick="changeButton(this)" type="button" value="Flights">
+            <input class="item" id="hotels-button" onclick="changeButton(this)" type="button" value="Hotels">
+            <input class="item" id="cars-button" onclick="changeButton(this)" type="button" value="Car Hire">
+        </div>
+
+        <div class="search-content" id="flights-content">
+            <input checked id="round-trip" name="trip_type" type="radio">
+            <label for="round-trip">Round Trip</label>
+            <input id="one-way" name="trip_type" type="radio">
+            <label for="one-way">One Way</label>
+            <div class="grid-container">
+                <label for="from">From</label>
+                <label for="to">To</label>
+                <select class="search-input" id="from" name="">
+                    <option value="yyz">Toronto (YYZ)</option>
+                </select>
+                <select class="search-input" id="to" name="">
+                    <option value="lhr">London (LHR)</option>
+                    <option value="cdg">Paris (CDG)</option>
+                    <option value="fra">Frankfurt (FRA)</option>
+                    <option value="ams">Amsterdam (AMS)</option>
+                    <option value="mad">Madrid (MAD)</option>
+                    <option value="fco">Rome (FCO)</option>
+                    <option value="zrh">Zurich (ZRH)</option>
+                    <option value="arn">Stockholm (ARN)</option>
+                    <option value="cph">Copenhagen (CPH)</option>
+                    <option value="osl">Oslo (OSL)</option>
+                </select>
+
+                <label for="depart">Depart</label>
+                <label for="return">Return</label>
+                <input class="search-input" id="depart" onchange="changeReturnMin()" type="date">
+                <input class="search-input" id="return" type="date">
+
+                <label for="cabin-class">Cabin Class</label>
+                <div class="grid-container">
+                    <label for="adults">Adults (16+)</label>
+                    <label for="children">Children</label>
+                </div>
+
+                <select class="search-input" id="cabin-class" name="">
+                    <option value="economy">Economy</option>
+                    <option value="premium-economy">Premium Economy</option>
+                    <option value="business">Business</option>
+                    <option value="first">First</option>
+                </select>
+                <div class="grid-container">
+                    <input class="search-input" id="adults" min="0" name="adults" onchange="changePassengerCount(this)"
+                           type="number" value="1">
+                    <input class="search-input" id="children" min="0" name="children"
+                           onchange="changePassengerCount(this)" type="number" value="0">
+                </div>
+            </div>
+            <input id="direct-flights" name="direct-flights" style="margin-top: 18px;" type="checkbox">
+            <label for="direct-flights">Direct Flights Only</label>
+            <input class="search-button" onclick="search()" type="button" value="Search Flights">
+        </div>
+        <div class="search-content hidden" id="hotels-content">Coming Soon...</div>
+        <div class="search-content hidden" id="cars-content">Coming Soon...</div>
+    </div>
+</div>
+<script>
+    const tomorrow = new Date();
+    tomorrow.setDate(tomorrow.getDate() + 1);
+    const tomorrowPlus30 = new Date();
+    if (tomorrow.getMonth() === 11)
+        tomorrowPlus30.setFullYear(tomorrow.getFullYear() + 1, 0, tomorrow.getDate() + 30);
+    else
+        tomorrowPlus30.setFullYear(tomorrow.getFullYear(), tomorrow.getMonth() + 1, tomorrow.getDate());
+    document.getElementById('depart').min = tomorrow.toLocaleDateString('en-ca');
+    document.getElementById('depart').max = tomorrowPlus30.toLocaleDateString('en-ca');
+    document.getElementById('return').min = tomorrow.toLocaleDateString('en-ca');
+    document.getElementById('return').max = tomorrowPlus30.toLocaleDateString('en-ca');
+</script>
+</body>
+</html>

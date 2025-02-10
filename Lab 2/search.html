@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flight Search | Bobo Airlines</title>
+    <link href='https://fonts.googleapis.com/css?family=ADLaM Display' rel='stylesheet'>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="./styles.css" rel="stylesheet">
+    <link href="favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <script src="./scripts.js"></script>
+</head>
+<body class="swirl-background" onload="populateData()">
+<nav>
+    <a class="home-redirect" href="./index.html"><span>Bobo</span> Airlines</a>
+    <div>
+        <a class="nav-link" href="./home.html">Home</a>
+        <a class="nav-link" href="./about.html">About</a>
+        <a class="nav-link" href="./contact.html">Contact Us</a>
+        <a class="nav-link" href="./home.html"><i class="fa">&#xf002;</i></a>
+    </div>
+</nav>
+
+<div class="search-info">
+    <label class="info-label" for="trip-type">Type</label>
+    <label class="info-label" for="from">From</label>
+    <label class="info-label" for="to">To</label>
+    <label class="info-label" for="depart">Depart</label>
+    <label class="info-label" for="return">Return</label>
+    <input class="info-input" disabled id="trip-type" name="trip_type" type="text">
+    <input class="info-input" disabled id="from" name="from" type="text">
+    <input class="info-input" disabled id="to" name="to" type="text">
+    <input class="info-input" disabled id="depart" name="depart" type="text">
+    <input class="info-input" disabled id="return" name="return" type="text">
+</div>
+<div class="flights-div">
+    <div class="flights-nav">
+        <p class="flights-title">Flights</p>
+        <p class="flights-total">Total</p>
+        <p class="flights-num" id="num-results"></p>
+    </div>
+    <ul id="flights"></ul>
+</div>
+</body>
+</html>

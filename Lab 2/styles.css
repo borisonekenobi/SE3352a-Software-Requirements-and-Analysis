@@ -1,0 +1,530 @@
+* {
+    font-family: 'ADLaM Display', sans-serif;
+}
+
+body {
+    background-color: #c1e5f5;
+    height: fit-content;
+    min-height: calc(100vh - 20px);
+    margin: 0;
+}
+
+.no-overflow {
+    overflow: hidden;
+}
+
+.swirl-background {
+    background-image: url("./resources/air_swirl_1.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.line {
+    width: 100%;
+    margin: 10px auto 9px auto;
+}
+
+.white {
+    border-top: 1px solid white;
+}
+
+.light-grey {
+    border-top: 1px solid lightgrey;
+}
+
+.grey {
+    border-top: 1px solid grey;
+}
+
+.dark-grey {
+    border-top: 1px solid #333;
+}
+
+.black {
+    border-top: 1px solid black;
+}
+
+nav {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 20px 10px;
+    margin: 20px 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #000;
+}
+
+.home-redirect {
+    font-size: 30px;
+}
+
+.home-redirect span {
+    color: #c00000;
+    font-size: 30px;
+}
+
+.nav-link {
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 22px;
+}
+
+.active {
+    color: #b53c3e;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.background {
+    width: 60%;
+    max-width: 600px;
+    vertical-align: middle;
+}
+
+.background div {
+    position: absolute;
+    vertical-align: middle;
+    translate: 60px 60px;
+}
+
+.background h1 {
+    max-width: 600px;
+    font-size: 90px;
+    color: #205c96;
+    text-align: right;
+    text-shadow: 5px -5px #fff;
+}
+
+.background p {
+    max-width: 600px;
+    font-size: 17px;
+    color: #51a0e1;
+    text-align: right;
+}
+
+.swirl-1 {
+    max-width: 600px;
+    translate: -10px -100px;
+}
+
+.swirl-2 {
+    max-width: 600px;
+    translate: -100px -100px;
+    transform: scaleX(-0.9) scaleY(0.9) rotate(15deg);
+}
+
+.item-search {
+    background: #fff;
+    height: fit-content;
+    border-radius: 5px;
+    margin-top: 0;
+    margin-bottom: auto;
+    translate: 0 15%;
+}
+
+.items {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.item:first-child {
+    border-radius: 5px 0 0 0;
+}
+
+.item {
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #4e95d9;
+    color: #fff;
+    border: none;
+    width: 150px;
+    font-size: 22px;
+}
+
+.item:last-child {
+    border-radius: 0 5px 0 0;
+}
+
+.item:has( + .item.selected) {
+    background-color: #a6caec;
+}
+
+.item.selected {
+    background-color: #fff;
+    color: #5197da;
+}
+
+.item.selected + .item {
+    background-color: #a6caec;
+}
+
+.search-content {
+    font-size: 16px;
+    padding: 15px;
+    min-height: 420px;
+}
+
+.hidden {
+    display: none;
+}
+
+input[type="radio"] {
+    accent-color: #4e95d9;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 10px;
+    max-width: 355px;
+}
+
+.grid-container label {
+    margin-top: 15px;
+}
+
+select {
+    width: 200px;
+}
+
+input[type="date"] {
+    width: 180px;
+}
+
+input[type="number"] {
+    width: 75px;
+}
+
+.search-input {
+    font-size: 20px;
+    border: none;
+    padding: 10px 10px;
+    background-color: #215f9a;
+    color: #fff;
+    color-scheme: dark;
+}
+
+.search-button {
+    display: block;
+    font-size: 20px;
+    color: #fff;
+    background-color: #b53b3d;
+    border: 3px solid #781617;
+    padding: 10px 5px;
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: 0;
+}
+
+.search-button:hover {
+    background-color: #781617;
+}
+
+.search-info {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    gap: 15px;
+    background-color: #a6a6a6;
+    border-radius: 15px;
+    width: fit-content;
+    padding: 10px 30px;
+    margin: auto;
+}
+
+.info-label {
+    color: #455c96;
+    font-size: 20px;
+}
+
+.info-input {
+    color: #000;
+    background-color: #fff;
+    width: 200px;
+    height: 35px;
+    border-radius: 8px;
+    padding: 1px 12px;
+}
+
+.flights-div {
+    width: fit-content;
+    margin: 20px auto;
+}
+
+.flights-nav {
+    display: flex;
+    background-color: #d9d9d9;
+    padding: 10px;
+    margin: 0;
+}
+
+.flights-nav p {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 15px;
+}
+
+.flights-title {
+    font-size: 30px;
+    color: #781617;
+    width: fit-content;
+    padding-right: 15px;
+    border-right: 4px solid #781617;
+    margin: 0;
+}
+
+.flights-total {
+    font-size: 20px;
+    color: #000;
+    width: fit-content;
+    margin: 0;
+}
+
+.flights-num {
+    font-size: 20px;
+    color: #51a7d9;
+    width: fit-content;
+    margin: 0;
+}
+
+.flights-div {
+    margin: 20px auto;
+}
+
+ul#flights {
+    padding: 0;
+    margin: 0;
+}
+
+.flight {
+    width: 100%;
+    list-style-type: none;
+    border-bottom: 2px solid #bfbfbf;
+}
+
+.flight:last-child {
+    border-bottom: none;
+}
+
+.flight-info-container {
+    display: flex;
+    gap: 10px;
+    background-color: #fff;
+    padding: 30px;
+}
+
+.flight-info {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    column-gap: 10px;
+    justify-content: space-between;
+    padding: 0 8px;
+}
+
+.airline-logo {
+    width: 35px;
+    height: 35px;
+    margin: auto 8px;
+}
+
+.airline-text {
+    font-size: 20px;
+    color: #000;
+    margin: auto 20px;
+}
+
+.flight-text {
+    font-size: 20px;
+    color: #000;
+    margin: auto;
+}
+
+.time {
+    width: 51px;
+}
+
+.date-text {
+    font-size: 10px;
+    color: #000;
+    margin: auto auto 0 auto;
+}
+
+.airport-text {
+    font-size: 10px;
+    color: #000;
+    margin: 0 auto auto auto;
+}
+
+.book-button {
+    background-color: #4e95d9;
+    color: #fff;
+    width: fit-content;
+    height: fit-content;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    margin: auto 0 auto 20px;
+}
+
+.book-button:hover {
+    background-color: #a6caec;
+}
+
+.booking-content {
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.flex-box {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+    width: fit-content;
+    padding: 10px;
+}
+
+.details {
+    background-color: white;
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: auto;
+}
+
+.price-container {
+    background-color: white;
+    border-radius: 15px;
+    margin-bottom: auto;
+    overflow: hidden;
+}
+
+.price-summary {
+    background-color: white;
+    padding: 20px;
+}
+
+.prices-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 30px;
+    row-gap: 5px;
+    margin: 0 auto;
+}
+
+.prices-text {
+    font-size: 12px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.price {
+    margin-left: auto;
+}
+
+.total-price {
+    display: flex;
+    justify-content: space-between;
+    background-color: #f8f8f8;
+    padding: 20px;
+}
+
+.total-price-text {
+    font-size: 18px;
+    margin: 0;
+}
+
+.details-title {
+    font-size: 20px;
+    font-style: normal;
+    width: fit-content;
+    padding-right: 15px;
+    margin: 0;
+}
+
+.flight-details {
+    padding: 15px;
+    border: 1px solid lightgrey;
+    border-radius: 15px;
+}
+
+.total-flight-time {
+    width: fit-content;
+    margin: auto;
+}
+
+.cabin-class {
+    font-size: 12px;
+    color: #d8292f;
+    margin: 0;
+}
+
+.continue-booking {
+    display: block;
+    background-color: #4e95d9;
+    font-size: 20px;
+    color: #fff;
+    width: fit-content;
+    height: fit-content;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 10px;
+    margin: 10px 10px 10px auto;
+}
+
+.continue-booking:hover {
+    background-color: #a6caec;
+}
+
+.fees {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    column-gap: 10px;
+    padding: 0;
+    margin: 0;
+}
+
+.fee-text {
+    min-width: 200px;
+    margin: 0 auto 0 0;
+}
+
+.fee-price {
+    margin: 0;
+}
+
+.checkout {
+    display: block;
+    background-color: #4e95d9;
+    font-size: 20px;
+    color: #fff;
+    width: fit-content;
+    height: fit-content;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 10px;
+    margin: 10px auto;
+}
+
+.checkout:hover {
+    background-color: #a6caec;
+}
+
+.checkout:disabled {
+    background-color: #bfbfbf;
+}
+
+.error {
+    display: block;
+    color: #d8292f;
+    font-size: 20px;
+    width: fit-content;
+    margin: 0 auto;
+}
